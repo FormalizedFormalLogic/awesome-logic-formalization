@@ -187,7 +187,11 @@ function renderHtml(data: Data): string {
 <body>
   <header class="site-header">
     <h1>Awesome Logic Formalization <span class="entry-count">${count}</span></h1>
-    <p>Bibliography of formalization/mechanization mainly related to mathematical logic.</p>
+    <p>
+      Bibliography of formalization/mechanization mainly related to mathematical logic.
+      If you want to add this, please submit a PR to our repository:
+      <a href="https://github.com/FormalizedFormalLogic/awesome-logic-formalization" target="_blank" rel="noopener">https://github.com/FormalizedFormalLogic/awesome-logic-formalization</a>
+    </p>
   </header>
   <main class="grid">
 ${cards}
