@@ -112,3 +112,59 @@ Xu Norrish 2020:
     This latter captures the desired saturation property of ultraproduct models on countably incomplete ultrafilters.
   tags:
     - modal logic
+
+jrh13/hol-light/GL:
+  title: jrh13/hol-light/GL
+  authors:
+    - name: Marco Maggesi
+    - name: Cosimo Perini Brogi
+  repository:
+    url: https://github.com/jrh13/hol-light/tree/master/GL
+  language: HOL Light
+  description: Modal completeness for the provability logic GL in HOL Light
+  tags:
+    - modal logic
+    - provability logic
+
+Maggesi Perini-Brogi 2021:
+  title: A Formal Proof of Modal Completeness for Provability Logic
+  authors:
+    - name: Marco Maggesi
+    - name: Cosimo Perini Brogi
+  language: HOL Light
+  paper:
+    doi: 10.4230/LIPICS.ITP.2021.26
+    repository: jrh13/hol-light/GL
+  description: |
+    This work presents a formalized proof of modal completeness for Gödel-Löb provability logic (GL) in the HOL Light theorem prover.
+    We describe the code we developed, and discuss some details of our implementation.
+    In particular, we show how we adapted the proof in the Boolos' monograph according to the formal language and tools at hand.
+    The strategy we develop here overcomes the technical difficulty due to the non-compactness of GL, and simplify the implementation.
+    Moreover, it can be applied to other normal modal systems with minimal changes.
+  tags:
+    - modal logic
+    - provability logic
+
+Maggesi Perini-Brogi 2023:
+  title: Mechanising Gödel-Löb Provability Logic in HOL Light
+  authors:
+    - name: Marco Maggesi
+    - name: Cosimo Perini Brogi
+  language: HOL Light
+  paper:
+    doi: 10.1007/s10817-023-09677-z
+    repository: jrh13/hol-light/GL
+  description: |
+    We introduce our implementation in HOL Light of the metatheory for Gödel-Löb provability logic (GL), 
+    covering soundness and completeness w.r.t. possible world semantics and featuring a prototype of a theorem prover for GL itself. 
+    The strategy we develop here to formalise the modal completeness proof overcomes the technical difficulty due to the non-compactness of GL 
+    and is an adaptation—according to the formal language and tools at hand—of the proof given in George Boolos' 1995 monograph. 
+    Our theorem prover for GL relies then on this formalisation, is implemented as a tactic of HOL Light that mimics the proof search in the labelled sequent calculus G3KGL, 
+    and works as a decision algorithm for the provability logic: 
+    if the algorithm positively terminates, the tactic succeeds in producing a HOL Light theorem stating that the input formula is a theorem of GL; 
+    if the algorithm negatively terminates, the tactic extracts a model falsifying the input formula. 
+    We discuss our code for the formal proof of modal completeness and the design of our proof search algorithm. 
+    Furthermore, we propose some examples of the latter’s interactive and automated use.
+  tags:
+    - modal logic
+    - provability logic
