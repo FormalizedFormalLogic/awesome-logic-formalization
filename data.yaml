@@ -348,3 +348,27 @@ Goré Ramanayake Shillito 2021:
   tags:
     - modal logic
     - provability logic
+
+minchaowu/ModalTab:
+  title: minchaowu/ModalTab
+  authors:
+    - name: Minchao Wu
+      github: minchaowu
+  repository:
+    url: https://github.com/minchaowu/ModalTab
+  description: Verified decision procedures for modal logics
+  language: Lean3
+  tags:
+    - modal logic
+    - tableaux
+
+Wu Goré 2019:
+  title: "Verified Decision Procedures for Modal Logics"
+  authors:
+    - name: Minchao Wu
+    - name: Rajeev Goré
+  language: Lean3
+  paper:
+    year: 2019
+    doi: 10.4230/LIPICS.ITP.2019.31
+    repository: minchaowu/ModalTab
