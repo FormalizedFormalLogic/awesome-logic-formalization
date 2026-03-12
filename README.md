@@ -2,7 +2,11 @@
 
 Bibliography of formalization/mechanization mainly related mathematical logic.
 
+Page: https://formalizedformallogic.github.io/awesome-logic-formalization
+
 ## Contributing
+
+Edit [data.yaml](./data.yaml) and submit a PR.
 
 ### HTML Generate
 
