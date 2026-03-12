@@ -155,15 +155,15 @@ Maggesi Perini-Brogi 2023:
     doi: 10.1007/s10817-023-09677-z
     repository: jrh13/hol-light/GL
   description: |
-    We introduce our implementation in HOL Light of the metatheory for Gödel-Löb provability logic (GL), 
-    covering soundness and completeness w.r.t. possible world semantics and featuring a prototype of a theorem prover for GL itself. 
-    The strategy we develop here to formalise the modal completeness proof overcomes the technical difficulty due to the non-compactness of GL 
-    and is an adaptation—according to the formal language and tools at hand—of the proof given in George Boolos' 1995 monograph. 
-    Our theorem prover for GL relies then on this formalisation, is implemented as a tactic of HOL Light that mimics the proof search in the labelled sequent calculus G3KGL, 
-    and works as a decision algorithm for the provability logic: 
-    if the algorithm positively terminates, the tactic succeeds in producing a HOL Light theorem stating that the input formula is a theorem of GL; 
-    if the algorithm negatively terminates, the tactic extracts a model falsifying the input formula. 
-    We discuss our code for the formal proof of modal completeness and the design of our proof search algorithm. 
+    We introduce our implementation in HOL Light of the metatheory for Gödel-Löb provability logic (GL),
+    covering soundness and completeness w.r.t. possible world semantics and featuring a prototype of a theorem prover for GL itself.
+    The strategy we develop here to formalise the modal completeness proof overcomes the technical difficulty due to the non-compactness of GL
+    and is an adaptation—according to the formal language and tools at hand—of the proof given in George Boolos' 1995 monograph.
+    Our theorem prover for GL relies then on this formalisation, is implemented as a tactic of HOL Light that mimics the proof search in the labelled sequent calculus G3KGL,
+    and works as a decision algorithm for the provability logic:
+    if the algorithm positively terminates, the tactic succeeds in producing a HOL Light theorem stating that the input formula is a theorem of GL;
+    if the algorithm negatively terminates, the tactic extracts a model falsifying the input formula.
+    We discuss our code for the formal proof of modal completeness and the design of our proof search algorithm.
     Furthermore, we propose some examples of the latter’s interactive and automated use.
   tags:
     - modal logic
@@ -176,11 +176,11 @@ FormalizedFormalLogic/Foundation:
       github: iehality
     - name: Mashu Noguchi
       github: SnO2WMaN
-  language: Lean
+  language: Lean4
   repository: https://github.com/FormalizedFormalLogic/Foundation
   description: |
     Lean4 formalization for overall of mathematical logic.
-    Including: 
+    Including:
       - (classical | intuitionistic | intermediate) propositional logic
       - (classical | intuitionistic) first-order predicate logic / arithmetic / set theory
         - Gödel's Completeness Theorem
@@ -202,13 +202,26 @@ FormalizedFormalLogic/Foundation:
 
 FormalizedFormalLogic/NonClassicalModalLogic:
   title: FormalizedFormalLogic/NonClassicalModalLogic
-  authors: 
+  authors:
     - name: Mashu Noguchi
       github: SnO2WMaN
-  language: Lean
+  language: Lean4
   repository: https://github.com/FormalizedFormalLogic/NonClassicalModalLogic
   description: |
-    Lean4 Formalization of Non-classical modal logic: (intuitionistic | constructive) modal logic. 
-  tags: 
-    - modal logic 
-  
+    Lean4 Formalization of Non-classical modal logic: (intuitionistic | constructive) modal logic.
+  tags:
+    - modal logic
+
+ruplet/formalization-of-bounded-arithmetic:
+  title: ruplet/formalization-of-bounded-arithmetic
+  authors:
+    - name: Paweł Balawender
+      github: ruplet
+  repository:
+    url: https://github.com/ruplet/formalization-of-bounded-arithmetic
+  description: |
+    Formalizing bounded arithmetic and proof complexity and proof extraction.
+  language: Lean4
+  tags:
+    - bounded arithmetic
+    - computational complexity
