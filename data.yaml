@@ -319,3 +319,32 @@ Bentzen 2021:
     The full source code is available online and has been typechecked with Lean 3.4.2.
   tags:
     - modal logic
+
+ianshil/CE_GLS:
+  title: ianshil/CE_GLS
+  authors:
+    - name: Ian Shillito
+      github: ianshil
+  language: Coq
+  repository: https://github.com/ianshil/CE_GLS
+  description: |
+    Cut-elimination via backward proof-search for GLS
+  tags:
+    - modal logic
+    - provability logic
+
+Goré Ramanayake Shillito 2021:
+  title: "Cut-Elimination for Provability Logic by Terminating Proof-Search: Formalised and Deconstructed Using Coq"
+  authors:
+    - name: Rajeev Goré
+    - name: Revantha Ramanayake
+    - name: Ian Shillito
+  language: Coq
+  description: "Recently, Brighton gave another cut-admissibility proof for the standard set-based sequent calculus GLS for modal provability logic GL. One of the two induction measures that Brighton uses is novel: the maximum height of regress trees in an auxiliary calculus called RGL. Tautology elimination is established rather than direct cut-admissibility, and at some points the input derivation appears to be ignored in favour of a derivation obtained by backward proof-search. By formalising the GLS calculus and the proofs in Coq, we show that: (1) the use of the novel measure is problematic under the usual interpretation of the Gentzen comma as set union, and a multiset-based sequent calculus provides a more natural formulation; (2) the detour through tautology elimination is unnecessary; and (3) we can use the same induction argument without regress trees to obtain a direct proof of cut-admissibility that is faithful to the input derivation."
+  paper:
+    year: 2021
+    doi: 10.1007/978-3-030-86059-2_18
+    repository: ianshil/CE_GLS
+  tags:
+    - modal logic
+    - provability logic
