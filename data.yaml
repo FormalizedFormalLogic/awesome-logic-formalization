@@ -77,6 +77,7 @@ D'Abrera Goré 2018:
   tags:
     - modal logic
   paper:
+    year: 2018
     links:
       - title: Google Scholar
         url: https://scholar.google.com/scholar_lookup?title=Verified%20synthesis%20of%20(very%20simple)%20Sahlqvist%20correspondents%20via%20coq
@@ -102,6 +103,7 @@ Xu Norrish 2020:
     - name: Michael Norrish
   language: HOL4
   paper:
+    year: 2020
     doi: 10.1007/978-3-030-51074-9
     repository: u5943321/Modal-Logic
   description: |
@@ -133,6 +135,7 @@ Maggesi Perini-Brogi 2021:
     - name: Cosimo Perini Brogi
   language: HOL Light
   paper:
+    year: 2021
     doi: 10.4230/LIPICS.ITP.2021.26
     repository: jrh13/hol-light/GL
   description: |
@@ -152,6 +155,7 @@ Maggesi Perini-Brogi 2023:
     - name: Cosimo Perini Brogi
   language: HOL Light
   paper:
+    year: 2023
     doi: 10.1007/s10817-023-09677-z
     repository: jrh13/hol-light/GL
   description: |
@@ -236,3 +240,27 @@ flypitch/flypitch:
   language: Lean3
   description: |
     A formal proof of the independence of the continuum hypothesis.
+
+Bailitis 2024:
+  title: Löb's Theorem and Provability Predicates in Coq
+  authors:
+    - name: Janis Bailitis
+  language: Coq
+  paper:
+    year: 2024
+    links:
+      - title: Saarland University
+        url: https://www.ps.uni-saarland.de/~bailitis/bachelor.php
+
+Bailitis Kirst Forster 2025:
+  title: Löb's Theorem and Provability Predicates in Rocq
+  authors:
+    - name: Janis Bailitis
+    - name: Dominik Kirst
+    - name: Yannick Forster
+  language: Coq
+  paper:
+    year: 2025
+    links:
+      - title: TYPES 2025
+        url: https://msp.cis.strath.ac.uk/types2025/abstracts/TYPES2025_paper17.pdf
