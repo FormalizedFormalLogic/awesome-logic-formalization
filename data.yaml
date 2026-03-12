@@ -11,3 +11,19 @@ znssong/SetTheory:
   link:
     - title: 'Zulip announcement: "Formalizing Kunen''s Inconsistency Theorem"'
       url: https://leanprover.zulipchat.com/#narrow/channel/113486-General-announcements/topic/Formalizing.20Kunen's.20Inconsistency.20Theorem/with/578529814
+
+staroperator/mathematical-logic-in-lean:
+  authors:
+    - name: Dexin Zhang
+      github: staroperator
+  repository: https://github.com/staroperator/mathematical-logic-in-lean
+  language: Lean4
+  description: |
+    - Gödel's completeness theorem
+    - Representation theorem in Robinson arithmetic
+    - Categoricity of second-order arithmetic and real numbers
+    - Quasi-categoricity of second-order arithmetic and real numbers
+  tags:
+    - arithmetic
+    - first-order logic
+    - second-order logic
