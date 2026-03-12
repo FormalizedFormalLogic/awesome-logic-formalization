@@ -121,7 +121,7 @@ function renderCard(key: string, entry: Entry, data: Data): string {
 
   if ("repository" in entry) {
     footerItems.push(
-      `<a class="repo-btn" href="${entry.repository.url}" target="_blank" rel="noopener"><img src="/github.svg" width="14" height="14" alt="" aria-hidden="true"> Repository</a>`,
+      `<a class="repo-btn" href="${entry.repository.url}" target="_blank" rel="noopener"><img src="./github.svg" width="14" height="14" alt="" aria-hidden="true"> Repository</a>`,
     );
   }
 
@@ -144,7 +144,7 @@ function renderCard(key: string, entry: Entry, data: Data): string {
       const refId = toId(entry.paper.repository);
       const refTitle = esc(entry.paper.repository);
       footerItems.push(
-        `<a class="repo-btn" href="#${refId}"><img src="/github.svg" width="14" height="14" alt="" aria-hidden="true">${refTitle}</a>`,
+        `<a class="repo-btn" href="#${refId}"><img src="./github.svg" width="14" height="14" alt="" aria-hidden="true">${refTitle}</a>`,
       );
     }
   }
