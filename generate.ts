@@ -19,14 +19,38 @@ interface Link {
   url: string;
 }
 
-interface Entry {
-  authors?: Author[];
-  repository?: string;
-  language?: string;
-  description?: string;
-  tags?: string[];
-  link?: Link[];
+interface Repository {
+  url: string;
 }
+
+interface Paper {
+  doi?: string;
+  repository?: string; // key reference within the same data file
+  links: {
+    title?: string;
+    url: string;
+  }[];
+}
+
+type Entry =
+  | {
+      authors: Author[];
+      repository: Repository;
+      language: string;
+      description: string;
+      tags?: string[];
+      link?: Link[];
+      title: string;
+    }
+  | {
+      authors: Author[];
+      paper: Paper;
+      language: string;
+      description: string;
+      tags?: string[];
+      link?: Link[];
+      title: string;
+    };
 
 type Data = Record<string, Entry>;
 
@@ -47,14 +71,21 @@ function langClass(lang: string): string {
   return "lang-" + lang.toLowerCase().replace(/\s+/g, "-");
 }
 
+function toId(key: string): string {
+  return key
+    .replace(/'/g, "")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 // ---------------------------------------------------------------------------
 // Rendering
 // ---------------------------------------------------------------------------
 
-function renderCard(key: string, entry: Entry): string {
-  const repoUrl = esc(entry.repository ?? "");
+function renderCard(key: string, entry: Entry, data: Data): string {
   const language = esc(entry.language ?? "");
   const description = marked.parse((entry.description ?? "").trim()) as string;
+  const title = entry.title;
   const tags = entry.tags ?? [];
   const authors = entry.authors ?? [];
   const links = entry.link ?? [];
@@ -85,12 +116,40 @@ function renderCard(key: string, entry: Entry): string {
         .join("")}</ul>`
     : "";
 
-  const repoBtn = repoUrl
-    ? `<a class="repo-btn" href="${repoUrl}" target="_blank" rel="noopener"><img src="/github.svg" width="14" height="14" alt="" aria-hidden="true"> Repository</a>`
-    : "";
+  // Footer actions
+  const footerItems: string[] = [];
 
-  const id = esc(key.replace(/\//g, "-"));
-  const title = esc(key);
+  if ("repository" in entry) {
+    footerItems.push(
+      `<a class="repo-btn" href="${entry.repository.url}" target="_blank" rel="noopener"><img src="/github.svg" width="14" height="14" alt="" aria-hidden="true"> Repository</a>`,
+    );
+  }
+
+  if ("paper" in entry) {
+    if (entry.paper.links) {
+      entry.paper.links.forEach((l) => {
+        footerItems.push(
+          `<a class="repo-btn" href="${l.url}" target="_blank" rel="noopener">${esc(l.title ?? "Link")}</a>`,
+        );
+      });
+    }
+
+    if (entry.paper.doi) {
+      const doi = esc(entry.paper.doi);
+      footerItems.push(
+        `<a class="repo-btn" href="https://doi.org/${doi}" target="_blank" rel="noopener">DOI: ${doi}</a>`,
+      );
+    }
+    if (entry.paper.repository && entry.paper.repository in data) {
+      const refId = toId(entry.paper.repository);
+      const refTitle = esc(entry.paper.repository);
+      footerItems.push(
+        `<a class="repo-btn" href="#${refId}"><img src="/github.svg" width="14" height="14" alt="" aria-hidden="true">${refTitle}</a>`,
+      );
+    }
+  }
+
+  const id = toId(key);
 
   return `
     <article class="card" id="${id}">
@@ -106,14 +165,14 @@ function renderCard(key: string, entry: Entry): string {
         ${description ? `<div class="card-description">${description}</div>` : ""}
         ${linksHtml}
       </div>
-      ${repoBtn ? `<footer class="card-footer">${repoBtn}</footer>` : ""}
+      ${footerItems.length ? `<footer class="card-footer">${footerItems.join("\n        ")}</footer>` : ""}
     </article>`;
 }
 
 function renderHtml(data: Data): string {
   const cards = Object.entries(data)
     .toSorted(([a], [b]) => a.localeCompare(b))
-    .map(([k, v]) => renderCard(k, v))
+    .map(([k, v]) => renderCard(k, v, data))
     .join("\n");
   const count = Object.keys(data).length;
 

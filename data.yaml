@@ -3,7 +3,8 @@ znssong/SetTheory:
   authors:
     - name: Shuhao Song
       github: znssong
-  repository: https://github.com/znssong/SetTheory
+  repository:
+    url: https://github.com/znssong/SetTheory
   language: Lean4
   description: |
     Formalization of Kunen's inconsistency theorem.
@@ -18,7 +19,8 @@ staroperator/mathematical-logic-in-lean:
   authors:
     - name: Dexin Zhang
       github: staroperator
-  repository: https://github.com/staroperator/mathematical-logic-in-lean
+  repository:
+    url: https://github.com/staroperator/mathematical-logic-in-lean
   language: Lean4
   description: |
     - Gödel's completeness theorem
@@ -36,7 +38,8 @@ YnirPaz/PCF-Theory:
   authors:
     - name: Ynir Paz
       github: YnirPaz
-  repository: https://github.com/YnirPaz/PCF-Theory
+  repository:
+    url: https://github.com/YnirPaz/PCF-Theory
   language: Lean4
   description: |
     A formalization of PCF theory in Lean.
