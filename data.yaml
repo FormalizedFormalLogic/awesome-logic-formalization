@@ -1,0 +1,13 @@
+znssong/SetTheory:
+  authors:
+    - name: Shuhao Song
+      github: znssong
+  repository: https://github.com/znssong/SetTheory
+  language: Lean4
+  description: |
+    Formalization of Kunen's inconsistency theorem.
+  tags:
+    - set theory
+  link:
+    - title: 'Zulip announcement: "Formalizing Kunen''s Inconsistency Theorem"'
+      url: https://leanprover.zulipchat.com/#narrow/channel/113486-General-announcements/topic/Formalizing.20Kunen's.20Inconsistency.20Theorem/with/578529814
