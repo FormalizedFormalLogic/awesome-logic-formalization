@@ -120,7 +120,7 @@ a:hover {
 
 .lang-lean {
   background: #fff;
-  color: #1f2328;
+  color: #000;
   border: 1px solid #d0d7de;
 }
 
@@ -145,7 +145,7 @@ a:hover {
 }
 
 .lang-hol4 {
-  background: #6c3483;
+  background: #DC566D;
 }
 
 .lang-hol-light {

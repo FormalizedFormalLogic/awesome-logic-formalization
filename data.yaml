@@ -81,3 +81,34 @@ D'Abrera Goré 2018:
       - title: Google Scholar
         url: https://scholar.google.com/scholar_lookup?title=Verified%20synthesis%20of%20(very%20simple)%20Sahlqvist%20correspondents%20via%20coq
     repository: caitlindabrera/Sahlqvist
+
+u5943321/Modal-Logic:
+  title: u5943321/Modal-Logic
+  authors:
+    - name: Yiming Xu
+      github: u5943321
+  repository:
+    url: https://github.com/u5943321/Modal-Logic
+  language: HOL4
+  description: |
+    Formalized modal logic based on _Modal Logic_ based on P. Blackburn et al.
+  tags:
+    - modal logic
+
+Xu Norrish 2020:
+  title: Mechanised Modal Model Theory
+  authors:
+    - name: Yiming Xu
+    - name: Michael Norrish
+  language: HOL4
+  paper:
+    doi: 10.1007/978-3-030-51074-9
+    repository: u5943321/Modal-Logic
+  description: |
+    In this paper, we discuss the mechanisation of some fundamental propositional modal model theory.
+    The focus on models is novel: previous work in mechanisations of modal logic have centered on proof systems and applications in model-checking.
+    We have mechanised a number of fundamental results from the first two chapters of a standard textbook (Blackburn et al.).
+    Among others, one important result, the Van Benthem characterisation theorem, characterises the connection between modal logic and first order logic.
+    This latter captures the desired saturation property of ultraproduct models on countably incomplete ultrafilters.
+  tags:
+    - modal logic
