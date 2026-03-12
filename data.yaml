@@ -270,3 +270,52 @@ Bailitis Kirst Forster 2025:
   tags:
     - incompleteness theorem
     - synthetic computability theory
+
+bbentzen/mpl:
+  title: bbentzen/mpl
+  authors:
+    - name: Bruno Bentzen
+      github: bbentzen
+  repository:
+    url: https://github.com/bbentzen/mpl
+  language: Lean3
+  description: |
+    A Henkin-style completeness proof for the modal logic S5
+  tags:
+    - modal logic
+
+bbentzen/ipl:
+  title: bbentzen/ipl
+  authors:
+    - name: Bruno Bentzen
+      github: bbentzen
+    - name: Huayu Guo
+    - name: Dongheng Chen
+  repository:
+    url: https://github.com/bbentzen/ipl
+  language: Lean3
+  description: |
+    Verified completeness in Henkin-style for intuitionistic propositional logic
+  tags:
+    - propositional logic
+
+Bentzen 2021:
+  title: A Henkin-Style Completeness Proof for the Modal Logic S5
+  authors:
+    - name: Bruno Bentzen
+  paper:
+    year: 2021
+    doi: 10.1007/978-3-030-89391-0_25
+    repository: bbentzen/mpl
+  description: |
+    This paper presents a recent formalization of a Henkin-style completeness proof
+    for the propositional modal logic S5 using the Lean theorem prover.
+    The proof formalized is close to that of Hughes and Cresswell,
+    but the system, based on a different choice of axioms,
+    is better described as a Mendelson system augmented with axiom schemes
+    for K, T, S4, and B, and the necessitation rule as a rule of inference.
+    The language has the false and implication as the only primitive logical connectives
+    and necessity as the only primitive modal operator.
+    The full source code is available online and has been typechecked with Lean 3.4.2.
+  tags:
+    - modal logic
