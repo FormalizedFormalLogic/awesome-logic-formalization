@@ -45,6 +45,7 @@ YnirPaz/PCF-Theory:
     A formalization of PCF theory in Lean.
   tags:
     - set theory
+
 caitlindabrera/Sahlqvist:
   title: caitlindabrera/Sahlqvist
   authors:
@@ -58,3 +59,24 @@ caitlindabrera/Sahlqvist:
   tags:
     - modal logic
 
+D'Abrera Goré 2018:
+  title: Verified synthesis of (very simple) Sahlqvist correspondents via Coq
+  authors:
+    - name: Caitlin D'Abrera
+    - name: Rajeev Goré
+  description: |
+    We provide an account of our formalisation of Sahlqvist’s global correspondence theorem
+    for the very simple Sahlqvist class in the proof-assistant Coq.
+    We constructed our own encodings of modal, first-order and second-order fragments
+    and provide corresponding libraries containing numerous lemmata required for the proof of (very simple) Sahlqvist’s theorem.
+    Moreover, we extracted from the constructive Coq proof code a verified program in Haskell
+    that computes the first-order correspondent given a very simple Sahlqvist modal formula.
+    We believe this verified program is the first of its kind in this area
+    and we hope that this first case study will pave the way for future formalisation work to be done in correspondence theory and beyond.
+  tags:
+    - modal logic
+  paper:
+    links:
+      - title: Google Scholar
+        url: https://scholar.google.com/scholar_lookup?title=Verified%20synthesis%20of%20(very%20simple)%20Sahlqvist%20correspondents%20via%20coq
+    repository: caitlindabrera/Sahlqvist
