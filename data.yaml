@@ -64,6 +64,7 @@ D'Abrera Goré 2018:
   authors:
     - name: Caitlin D'Abrera
     - name: Rajeev Goré
+  language: Coq
   description: |
     We provide an account of our formalisation of Sahlqvist’s global correspondence theorem
     for the very simple Sahlqvist class in the proof-assistant Coq.
