@@ -168,3 +168,47 @@ Maggesi Perini-Brogi 2023:
   tags:
     - modal logic
     - provability logic
+
+FormalizedFormalLogic/Foundation:
+  title: FormalizedFormalLogic/Foundation
+  authors:
+    - name: Shogo Saito
+      github: iehality
+    - name: Mashu Noguchi
+      github: SnO2WMaN
+  language: Lean
+  repository: https://github.com/FormalizedFormalLogic/Foundation
+  description: |
+    Lean4 formalization for overall of mathematical logic.
+    Including: 
+      - (classical | intuitionistic | intermediate) propositional logic
+      - (classical | intuitionistic) first-order predicate logic / arithmetic / set theory
+        - Gödel's Completeness Theorem
+        - Gentzen's Haupstatz (Cut-elimination theorem)
+        - Gödel's incomplteness theorem
+        - Consistency of ZFC
+      - modal logic
+        - Gödel-McKinsey-Tarski's theorem and modal companion
+      - provability logic
+        - Solovay's arithmetic completeness theorem
+  tags:
+    - propositional logic
+    - first-order logic
+    - arithmetic
+    - incompleteness theorem
+    - set theory
+    - modal logic
+    - provability logic
+
+FormalizedFormalLogic/NonClassicalModalLogic:
+  title: FormalizedFormalLogic/NonClassicalModalLogic
+  authors: 
+    - name: Mashu Noguchi
+      github: SnO2WMaN
+  language: Lean
+  repository: https://github.com/FormalizedFormalLogic/NonClassicalModalLogic
+  description: |
+    Lean4 Formalization of Non-classical modal logic: (intuitionistic | constructive) modal logic. 
+  tags: 
+    - modal logic 
+  
