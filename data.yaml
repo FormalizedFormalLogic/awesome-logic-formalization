@@ -27,5 +27,18 @@ staroperator/mathematical-logic-in-lean:
     - Quasi-categoricity of second-order arithmetic and real numbers
   tags:
     - arithmetic
+    - incompleteness theorem
     - first-order logic
     - second-order logic
+
+YnirPaz/PCF-Theory:
+  title: YnirPaz/PCF-Theory
+  authors:
+    - name: Ynir Paz
+      github: YnirPaz
+  repository: https://github.com/YnirPaz/PCF-Theory
+  language: Lean4
+  description: |
+    A formalization of PCF theory in Lean.
+  tags:
+    - set theory
