@@ -251,6 +251,9 @@ Bailitis 2024:
     links:
       - title: Saarland University
         url: https://www.ps.uni-saarland.de/~bailitis/bachelor.php
+  tags:
+    - incompleteness theorem
+    - synthetic computability theory
 
 Bailitis Kirst Forster 2025:
   title: Löb's Theorem and Provability Predicates in Rocq
@@ -264,3 +267,6 @@ Bailitis Kirst Forster 2025:
     links:
       - title: TYPES 2025
         url: https://msp.cis.strath.ac.uk/types2025/abstracts/TYPES2025_paper17.pdf
+  tags:
+    - incompleteness theorem
+    - synthetic computability theory
