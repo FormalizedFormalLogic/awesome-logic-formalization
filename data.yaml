@@ -45,3 +45,16 @@ YnirPaz/PCF-Theory:
     A formalization of PCF theory in Lean.
   tags:
     - set theory
+caitlindabrera/Sahlqvist:
+  title: caitlindabrera/Sahlqvist
+  authors:
+    - name: Caitlin D'Abrera
+      github: caitlindabrera
+  repository:
+    url: https://github.com/caitlindabrera/Sahlqvist
+  language: Coq
+  description: |
+    Formalization of Sahlqvist's theorem in Coq.
+  tags:
+    - modal logic
+
