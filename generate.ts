@@ -89,11 +89,14 @@ function renderCard(key: string, entry: Entry): string {
     ? `<a class="repo-btn" href="${repoUrl}" target="_blank" rel="noopener"><img src="/github.svg" width="14" height="14" alt="" aria-hidden="true"> Repository</a>`
     : "";
 
+  const id = esc(key.replace(/\//g, "-"));
+  const title = esc(key);
+
   return `
-    <article class="card">
+    <article class="card" id="${id}">
       <header class="card-header">
         <div class="card-title-row">
-          <h2 class="card-title">${esc(key)}</h2>
+          <h2 class="card-title" title="${title}"><a href="#${id}">${title}</a></h2>
           ${langBadge}
         </div>
         ${authorsHtml ? `<p class="card-authors">${authorsHtml}</p>` : ""}

@@ -1,4 +1,5 @@
 znssong/SetTheory:
+  title: znssong/SetTheory
   authors:
     - name: Shuhao Song
       github: znssong
@@ -13,6 +14,7 @@ znssong/SetTheory:
       url: https://leanprover.zulipchat.com/#narrow/channel/113486-General-announcements/topic/Formalizing.20Kunen's.20Inconsistency.20Theorem/with/578529814
 
 staroperator/mathematical-logic-in-lean:
+  title: staroperator/mathematical-logic-in-lean
   authors:
     - name: Dexin Zhang
       github: staroperator

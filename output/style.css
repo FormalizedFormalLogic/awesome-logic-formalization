@@ -93,6 +93,15 @@ a:hover {
   word-break: break-word;
 }
 
+.card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
 .lang-badge {
   font-size: 0.7rem;
   font-weight: 600;
