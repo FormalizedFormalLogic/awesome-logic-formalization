@@ -225,3 +225,14 @@ ruplet/formalization-of-bounded-arithmetic:
   tags:
     - bounded arithmetic
     - computational complexity
+
+flypitch/flypitch:
+  title: flypitch/flypitch
+  authors:
+    - name: Jesse Michael Han
+    - name: Floris van Doorn
+  repository:
+    url: https://github.com/flypitch/flypitch
+  language: Lean3
+  description: |
+    A formal proof of the independence of the continuum hypothesis.
