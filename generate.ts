@@ -182,6 +182,15 @@ function renderHtml(data: Data): string {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Awesome Logic Formalization</title>
+  <meta name="description" content="Bibliography of formalization/mechanization mainly related to mathematical logic." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Awesome Logic Formalization" />
+  <meta property="og:description" content="Bibliography of formalization/mechanization mainly related to mathematical logic." />
+  <meta property="og:url" content="https://formalizedformallogic.github.io/awesome-logic-formalization/" />
+  <meta property="og:image" content="https://github.com/FormalizedFormalLogic.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Awesome Logic Formalization" />
+  <meta name="twitter:description" content="Bibliography of formalization/mechanization mainly related to mathematical logic." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
