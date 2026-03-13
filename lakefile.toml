@@ -1,0 +1,14 @@
+name = "Awesome Logic Formalization"
+version = "0.1.0"
+defaultTargets = ["ALF", "generate_pages"]
+
+[[require]]
+scope = "acmepjz"
+name = "md4lean"
+
+[[lean_lib]]
+name = "ALF"
+
+[[lean_exe]]
+name = "generate_pages"
+root = "GeneratePages"

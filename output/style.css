@@ -112,50 +112,53 @@ a:hover {
   background: #555;
 }
 
-.lang-lean4 {
+.lang-badge.lean4 {
   background: #fff;
   color: #1f2328;
   border: 1px solid #d0d7de;
 }
 
-.lang-lean3 {
+.lang-badge.lean3 {
   background: #fff;
   color: #1f2328;
   border: 1px solid #d0d7de;
 }
 
-.lang-coq {
+.lang-badge.coq {
   background: #d14900;
 }
 
-.lang-isabelle {
-  background: #005580;
+.lang-badge.isabelle {
+  background: #fefe00;
 }
 
-.lang-agda {
-  background: #315f7e;
+.lang-badge.agda {
+  background: #315665;
 }
 
-.lang-metamath {
+.lang-badge.metamath {
   background: #8b6914;
 }
 
-.lang-mizar {
+.lang-badge.mizar {
   background: #2e6b3e;
 }
 
-.lang-hol4 {
+.lang-badge.hol4 {
   background: #DC566D;
 }
 
-.lang-hol-light {
+.lang-badge.hol-light {
   background: #EF7A08;
 }
+
 
 .card-authors {
   font-size: 0.82rem;
   color: #636c76;
 }
+
+
 
 .card-body {
   padding: 0 1rem 0.8rem;
@@ -163,30 +166,25 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-}
-
-.card-description {
-  font-size: 0.85rem;
   color: #636c76;
+  font-size: 0.85rem;
   line-height: 1.5;
 }
 
-.card-description p {
-  margin: 0;
-}
-
-.card-description p+p {
+.card-body p+p {
   margin-top: 0.4rem;
 }
 
-.card-description ul,
-.card-description ol {
+.card-body ul,
+.card-body ol {
   padding-left: 1.25rem;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
 }
+
+
 
 .card-tags {
   display: flex;
@@ -204,29 +202,34 @@ a:hover {
   border-radius: 12px;
 }
 
-.related-links {
+.card-related {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.related-links li::before {
+.card-related:not(:empty) {
+  padding: 0 1rem 0.8rem;
+}
+
+.card-related li::before {
   content: "↗ ";
   color: #0969da;
   font-size: 0.75rem;
 }
 
-.related-links a {
+.card-related a {
   font-size: 0.8rem;
 }
+
 
 .card-footer {
   padding: 0.7rem 1rem;
   border-top: 1px solid #d0d7de;
 }
 
-.repo-btn {
+.appendix-link {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -238,7 +241,7 @@ a:hover {
   transition: border-color 0.15s, color 0.15s;
 }
 
-.repo-btn:hover {
+.appendix-link:hover {
   color: #1f2328;
   border-color: #636c76;
   text-decoration: none;

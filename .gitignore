@@ -1,2 +1,5 @@
 # Output
-output/index.html
+output/*.html
+
+# Lake
+/.lake

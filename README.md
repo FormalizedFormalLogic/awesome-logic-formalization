@@ -6,7 +6,7 @@ Page: https://formalizedformallogic.github.io/awesome-logic-formalization
 
 ## Contributing
 
-Edit [data.yaml](./data.yaml) and submit a PR.
+Edit [ALF/Bibliography.lean](./ALF/Bibliography.lean) ([ALF/Authors.lean](./ALF/Authors.lean) if needed) and submit a PR.
 
 ### HTML Generate
 
