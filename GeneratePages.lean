@@ -1,4 +1,5 @@
 import ALF
+import MD4LeanTest.Parser
 
 def escape (s : String) : String :=
   s.foldl
@@ -23,8 +24,8 @@ def renderDescription (description : Option String) : String :=
   match description with
   | none => ""
   | some d =>
-  let content := escape d.trimAscii.toString
-  if content.isEmpty then "" else s!"<p class=\"desc\">{content}</p>"
+  let content := d.trimAscii.toString
+  if content.isEmpty then "" else MD4Lean.renderHtml content |>.get!
 
 structure AppendixLink where
   label : String

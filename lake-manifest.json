@@ -1,5 +1,15 @@
 {"version": "1.1.0",
  "packagesDir": ".lake/packages",
- "packages": [],
- "name": "«awesome-logic-formalization»",
+ "packages":
+ [{"url": "https://github.com/acmepjz/md4lean",
+   "type": "git",
+   "subDir": null,
+   "scope": "acmepjz",
+   "rev": "6a3fb240133bcb7e1a066fdc784b3fdc304e3fc5",
+   "name": "md4lean",
+   "manifestFile": "lake-manifest.json",
+   "inputRev": "main",
+   "inherited": false,
+   "configFile": "lakefile.lean"}],
+ "name": "«Awesome Logic Formalization»",
  "lakeDir": ".lake"}

@@ -129,11 +129,11 @@ a:hover {
 }
 
 .lang-badge.isabelle {
-  background: #005580;
+  background: #fefe00;
 }
 
 .lang-badge.agda {
-  background: #315f7e;
+  background: #315665;
 }
 
 .lang-badge.metamath {
@@ -166,24 +166,17 @@ a:hover {
   gap: 0.6rem;
 }
 
-.card-description {
-  font-size: 0.85rem;
-  color: #636c76;
-  line-height: 1.5;
-}
-
-.card-body p {
-  margin: 0;
+.card-body {
   font-size: 0.85rem;
   line-height: 1.5;
 }
 
-.card-description p+p {
+.card-body p+p {
   margin-top: 0.4rem;
 }
 
-.card-description ul,
-.card-description ol {
+.card-body ul,
+.card-body ol {
   padding-left: 1.25rem;
   margin: 0;
   display: flex;

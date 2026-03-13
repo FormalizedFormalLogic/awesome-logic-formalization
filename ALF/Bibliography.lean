@@ -9,7 +9,7 @@ public inductive TheoremProver where
   | Coq
   | Agda
   | Isabelle
-  | HOL
+  | HOL4
   | HOL_Light
 deriving Repr
 
@@ -19,7 +19,7 @@ public def TheoremProver.slug : TheoremProver → String
   | .Coq => "coq"
   | .Agda => "agda"
   | .Isabelle => "isabelle"
-  | .HOL => "hol"
+  | .HOL4 => "hol4"
   | .HOL_Light => "hol-light"
 
 public def TheoremProver.name : TheoremProver → String
@@ -28,7 +28,7 @@ public def TheoremProver.name : TheoremProver → String
   | .Coq => "Rocq"
   | .Agda => "Agda"
   | .Isabelle => "Isabelle"
-  | .HOL => "HOL"
+  | .HOL4 => "HOL4"
   | .HOL_Light => "HOL Light"
 
 
@@ -136,12 +136,12 @@ def «staroperator/mathematical-logic-in-lean» : Repository where
     .first_order_logic,
     .higher_order_logic
   ]
-  description := "
-    - Gödel's completeness theorem
-    - Representation theorem in Robinson arithmetic
-    - Categoricity of second-order arithmetic and real numbers
-    - Quasi-categoricity of second-order arithmetic and real numbers
-    "
+  description := r#"
+- Gödel's completeness theorem
+- Representation theorem in Robinson arithmetic
+- Categoricity of second-order arithmetic and real numbers
+- Quasi-categoricity of second-order arithmetic and real numbers
+"#
 
 def «YnirPaz/PCF-Theory» : Repository where
   url := .mk "YnirPaz" "PCF-Theory"
@@ -167,14 +167,14 @@ def «D'Abrera Goré 2018» : Publication where
 
 def «u5943321/Modal-Logic» : Repository where
   url := .mk "u5943321" "Modal-Logic"
-  tp := [.HOL]
+  tp := [.HOL4]
   authors := [«u5943321»]
   tags := [.modal_logic]
   description := "Formalized modal logic based on _Modal Logic_ based on P. Blackburn et al."
 
 def «Xu Norrish 2020» : Publication where
   title := "Mechanised Modal Model Theory"
-  tp := [.HOL]
+  tp := [.HOL4]
   authors := [«u5943321», «Michael Norrish»]
   tags := [.modal_logic]
   year := 2020
@@ -228,20 +228,20 @@ def «FormalizedFormalLogic/Foundation» : Repository where
     .modal_logic,
     .provability_logic
   ]
-  description := "
-    Lean4 formalization for overall of mathematical logic.
-    Including:
-      - (classical | intuitionistic | intermediate) propositional logic
-      - (classical | intuitionistic) first-order predicate logic / arithmetic / set theory
-        - Gödel's Completeness Theorem
-        - Gentzen's Haupstatz (Cut-elimination theorem)
-        - Gödel's incomplteness theorem
-        - Consistency of ZFC
-      - modal logic
-        - Gödel-McKinsey-Tarski's theorem and modal companion
-      - provability logic
-        - Solovay's arithmetic completeness theorem
-    "
+  description := r#"
+Lean4 formalization for overall of mathematical logic.
+Including:
+  - (classical | intuitionistic | intermediate) propositional logic
+  - (classical | intuitionistic) first-order predicate logic / arithmetic / set theory
+    - Gödel's Completeness Theorem
+    - Gentzen's Haupstatz (Cut-elimination theorem)
+    - Gödel's incomplteness theorem
+    - Consistency of ZFC
+  - modal logic
+    - Gödel-McKinsey-Tarski's theorem and modal companion
+  - provability logic
+    - Solovay's arithmetic completeness theorem
+"#
 
 def «FormalizedFormalLogic/NonClassicalModalLogic» : Repository where
   url := .mk "FormalizedFormalLogic" "NonClassicalModalLogic"
