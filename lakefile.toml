@@ -1,0 +1,6 @@
+name = "Awesome Logic Formalization"
+version = "0.1.0"
+defaultTargets = ["ALF"]
+
+[[lean_lib]]
+name = "ALF"
