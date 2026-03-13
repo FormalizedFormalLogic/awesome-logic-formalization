@@ -113,6 +113,11 @@ public inductive Bibliography
 instance : Coe Repository  Bibliography := ⟨.repo⟩
 instance : Coe Publication Bibliography := ⟨.pub⟩
 
+public def Bibliography.slug : Bibliography → String
+  | .repo r => r.slug
+  | .pub  p => p.slug
+
+
 namespace Bibliography
 
 public section
@@ -355,7 +360,7 @@ end Bibliography
 
 open Bibliography in
 
-public def bibliography : List Bibliography := [
+public def bibliography : List Bibliography := ([
   «Bailitis 2024»,
   «Bailitis Kirst Forster 2025»,
   «bbentzen/ipl»,
@@ -379,4 +384,5 @@ public def bibliography : List Bibliography := [
   «Xu Norrish 2020»,
   «YnirPaz/PCF-Theory»,
   «znssong/SetTheory»,
-]
+  ] : List Bibliography)
+  |>.mergeSort (fun a b => String.le a.slug.toLower b.slug.toLower)
