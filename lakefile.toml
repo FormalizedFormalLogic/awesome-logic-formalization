@@ -1,10 +1,10 @@
 name = "Awesome Logic Formalization"
 version = "0.1.0"
-defaultTargets = ["ALF"]
+defaultTargets = ["ALF", "generate_pages"]
 
 [[lean_lib]]
 name = "ALF"
 
 [[lean_exe]]
-name = "main"
-root = "Main"
+name = "generate_pages"
+root = "GeneratePages"

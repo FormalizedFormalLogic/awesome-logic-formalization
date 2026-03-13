@@ -73,6 +73,8 @@ public structure GitHubRepositoryURL where
   user: String
   repo: String
 
+public def GitHubRepositoryURL.slug (url : GitHubRepositoryURL) : String := s!"{url.user}/{url.repo}"
+
 public def GitHubRepositoryURL.toUrl (url : GitHubRepositoryURL) : String := s!"https://github.com/{url.user}/{url.repo}"
 
 
@@ -87,7 +89,7 @@ public structure Repository where
   url : GitHubRepositoryURL
   description : Option String := none
 
-public def Repository.slug (r : Repository) : String := r.url.repo
+public def Repository.slug (r : Repository) : String := r.url.slug
 
 public def Repository.title (r : Repository) : String := s!"{r.url.user}/{r.url.repo}"
 
