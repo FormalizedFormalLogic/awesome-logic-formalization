@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: leanprover/lean-action@v1
-      - run: lake exe main
+      - run: lake exe generate_pages
       - uses: actions/upload-pages-artifact@v4
         with:
           path: output
