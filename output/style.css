@@ -112,45 +112,46 @@ a:hover {
   background: #555;
 }
 
-.lang-lean4 {
+.lang-badge.lean4 {
   background: #fff;
   color: #1f2328;
   border: 1px solid #d0d7de;
 }
 
-.lang-lean3 {
+.lang-badge.lean3 {
   background: #fff;
   color: #1f2328;
   border: 1px solid #d0d7de;
 }
 
-.lang-coq {
+.lang-badge.coq {
   background: #d14900;
 }
 
-.lang-isabelle {
+.lang-badge.isabelle {
   background: #005580;
 }
 
-.lang-agda {
+.lang-badge.agda {
   background: #315f7e;
 }
 
-.lang-metamath {
+.lang-badge.metamath {
   background: #8b6914;
 }
 
-.lang-mizar {
+.lang-badge.mizar {
   background: #2e6b3e;
 }
 
-.lang-hol4 {
+.lang-badge.hol4 {
   background: #DC566D;
 }
 
-.lang-hol-light {
+.lang-badge.hol-light {
   background: #EF7A08;
 }
+
 
 .card-authors {
   font-size: 0.82rem;
@@ -171,8 +172,10 @@ a:hover {
   line-height: 1.5;
 }
 
-.card-description p {
+.card-body p {
   margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .card-description p+p {
@@ -221,12 +224,13 @@ a:hover {
   font-size: 0.8rem;
 }
 
+
 .card-footer {
   padding: 0.7rem 1rem;
   border-top: 1px solid #d0d7de;
 }
 
-.repo-btn {
+.appendix-link {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -238,7 +242,7 @@ a:hover {
   transition: border-color 0.15s, color 0.15s;
 }
 
-.repo-btn:hover {
+.appendix-link:hover {
   color: #1f2328;
   border-color: #636c76;
   text-decoration: none;

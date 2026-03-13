@@ -4,3 +4,7 @@ defaultTargets = ["ALF"]
 
 [[lean_lib]]
 name = "ALF"
+
+[[lean_exe]]
+name = "main"
+root = "Main"
