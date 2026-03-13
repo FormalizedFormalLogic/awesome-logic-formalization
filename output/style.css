@@ -164,9 +164,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-}
-
-.card-body {
+  color: #636c76;
   font-size: 0.85rem;
   line-height: 1.5;
 }

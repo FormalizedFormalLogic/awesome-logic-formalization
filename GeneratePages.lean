@@ -86,7 +86,7 @@ def renderPublicationCard (p : Publication) : String :=
     (authors := p.authors)
     (tp := p.tp)
     (tags := p.tags)
-    (description := none)
+    (description := p.abstract)
     (links := [])
 
 def main : IO Unit := do

@@ -97,6 +97,7 @@ public def Repository.title (r : Repository) : String := s!"{r.url.user}/{r.url.
 public structure Publication where
   title : String
   authors : List Author
+  abstract : Option String := none
   year : Nat
   tp : List TheoremProver
   tags : List Tag
@@ -166,6 +167,16 @@ def «D'Abrera Goré 2018» : Publication where
   title := "Verified synthesis of (very simple) Sahlqvist correspondents via Coq"
   tp := [.Coq]
   authors := [«caitlindabrera», «Rajeev Goré»]
+  abstract := r#"
+We provide an account of our formalisation of Sahlqvist's global correspondence theorem
+for the very simple Sahlqvist class in the proof-assistant Coq.
+We constructed our own encodings of modal, first-order and second-order fragments
+and provide corresponding libraries containing numerous lemmata required for the proof of (very simple) Sahlqvist's theorem.
+Moreover, we extracted from the constructive Coq proof code a verified program in Haskell
+that computes the first-order correspondent given a very simple Sahlqvist modal formula.
+We believe this verified program is the first of its kind in this area
+and we hope that this first case study will pave the way for future formalisation work to be done in correspondence theory and beyond.
+"#
   tags := [.modal_logic]
   year := 2018
   repositories := [«caitlindabrera/Sahlqvist»]
@@ -181,6 +192,13 @@ def «Xu Norrish 2020» : Publication where
   title := "Mechanised Modal Model Theory"
   tp := [.HOL4]
   authors := [«u5943321», «Michael Norrish»]
+  abstract := r#"
+In this paper, we discuss the mechanisation of some fundamental propositional modal model theory.
+The focus on models is novel: previous work in mechanisations of modal logic have centered on proof systems and applications in model-checking.
+We have mechanised a number of fundamental results from the first two chapters of a standard textbook (Blackburn et al.).
+Among others, one important result, the Van Benthem characterisation theorem, characterises the connection between modal logic and first order logic.
+This latter captures the desired saturation property of ultraproduct models on countably incomplete ultrafilters.
+"#
   tags := [.modal_logic]
   year := 2020
   doi := "10.1007/978-3-030-51074-9"
@@ -200,6 +218,13 @@ def «Maggesi Perini-Brogi 2021» : Publication where
   title := "A Formal Proof of Modal Completeness for Provability Logic"
   tp := [.HOL_Light]
   authors := [«Marco Maggesi», «Cosimo Perini Brogi»]
+  abstract := r#"
+This work presents a formalized proof of modal completeness for Godel-Lob provability logic (GL) in the HOL Light theorem prover.
+We describe the code we developed, and discuss some details of our implementation.
+In particular, we show how we adapted the proof in the Boolos' monograph according to the formal language and tools at hand.
+The strategy we develop here overcomes the technical difficulty due to the non-compactness of GL, and simplify the implementation.
+Moreover, it can be applied to other normal modal systems with minimal changes.
+"#
   tags := [
     .modal_logic,
     .provability_logic
@@ -212,6 +237,18 @@ def «Maggesi Perini-Brogi 2023» : Publication where
   title := "Mechanising Gödel-Löb Provability Logic in HOL Light"
   tp := [.HOL_Light]
   authors := [«Marco Maggesi», «Cosimo Perini Brogi»]
+  abstract := r#"
+We introduce our implementation in HOL Light of the metatheory for Godel-Lob provability logic (GL),
+covering soundness and completeness w.r.t. possible world semantics and featuring a prototype of a theorem prover for GL itself.
+The strategy we develop here to formalise the modal completeness proof overcomes the technical difficulty due to the non-compactness of GL
+and is an adaptation-according to the formal language and tools at hand-of the proof given in George Boolos' 1995 monograph.
+Our theorem prover for GL relies then on this formalisation, is implemented as a tactic of HOL Light that mimics the proof search in the labelled sequent calculus G3KGL,
+and works as a decision algorithm for the provability logic:
+if the algorithm positively terminates, the tactic succeeds in producing a HOL Light theorem stating that the input formula is a theorem of GL;
+if the algorithm negatively terminates, the tactic extracts a model falsifying the input formula.
+We discuss our code for the formal proof of modal completeness and the design of our proof search algorithm.
+Furthermore, we propose some examples of the latter's interactive and automated use.
+"#
   tags := [
     .modal_logic,
     .provability_logic
@@ -303,6 +340,17 @@ def «Bentzen 2021» : Publication where
   title := "A Henkin-Style Completeness Proof for the Modal Logic S5"
   tp := [.Lean3]
   authors := [«bbentzen»]
+  abstract := r#"
+This paper presents a recent formalization of a Henkin-style completeness proof
+for the propositional modal logic S5 using the Lean theorem prover.
+The proof formalized is close to that of Hughes and Cresswell,
+but the system, based on a different choice of axioms,
+is better described as a Mendelson system augmented with axiom schemes
+for K, T, S4, and B, and the necessitation rule as a rule of inference.
+The language has the false and implication as the only primitive logical connectives
+and necessity as the only primitive modal operator.
+The full source code is available online and has been typechecked with Lean 3.4.2.
+"#
   tags := [.modal_logic]
   year := 2021
   doi := "10.1007/978-3-030-89391-0_25"
@@ -345,6 +393,15 @@ def «Goré Ramanayake Shillito 2021» : Publication where
   title := "Cut-Elimination for Provability Logic by Terminating Proof-Search: Formalised and Deconstructed Using Coq"
   tp := [.Coq]
   authors := [«Rajeev Goré», «Revantha Ramanayake», «ianshil»]
+  abstract := r#"
+Recently, Brighton gave another cut-admissibility proof for the standard set-based sequent calculus GLS for modal provability logic GL.
+One of the two induction measures that Brighton uses is novel: the maximum height of regress trees in an auxiliary calculus called RGL.
+Tautology elimination is established rather than direct cut-admissibility, and at some points the input derivation appears to be ignored in favour of a derivation obtained by backward proof-search.
+By formalising the GLS calculus and the proofs in Coq, we show that:
+(1) the use of the novel measure is problematic under the usual interpretation of the Gentzen comma as set union, and a multiset-based sequent calculus provides a more natural formulation;
+(2) the detour through tautology elimination is unnecessary; and
+(3) we can use the same induction argument without regress trees to obtain a direct proof of cut-admissibility that is faithful to the input derivation.
+"#
   tags := [
     .modal_logic,
     .provability_logic,
