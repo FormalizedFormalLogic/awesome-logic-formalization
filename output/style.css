@@ -158,6 +158,8 @@ a:hover {
   color: #636c76;
 }
 
+
+
 .card-body {
   padding: 0 1rem 0.8rem;
   flex: 1;
@@ -182,6 +184,8 @@ a:hover {
   gap: 0.15rem;
 }
 
+
+
 .card-tags {
   display: flex;
   flex-wrap: wrap;
@@ -198,20 +202,24 @@ a:hover {
   border-radius: 12px;
 }
 
-.related-links {
+.card-related {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.related-links li::before {
+.card-related:not(:empty) {
+  padding: 0 1rem 0.8rem;
+}
+
+.card-related li::before {
   content: "↗ ";
   color: #0969da;
   font-size: 0.75rem;
 }
 
-.related-links a {
+.card-related a {
   font-size: 0.8rem;
 }
 

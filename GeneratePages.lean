@@ -27,6 +27,10 @@ def renderDescription (description : Option String) : String :=
   let content := d.trimAscii.toString
   if content.isEmpty then "" else MD4Lean.renderHtml content |>.get!
 
+structure RelatedLink where
+  label : String
+  slug : String
+
 structure AppendixLink where
   label : String
   url : String
@@ -38,6 +42,7 @@ def renderCard
   (tp : List TheoremProver)
   (tags : List Tag)
   (description : Option String := none)
+  (related : List RelatedLink)
   (links : List AppendixLink)
   : String :=
   s!"
@@ -47,24 +52,15 @@ def renderCard
           <h2 class=\"card-title\" title=\"{title}\">
             <a href=\"#{slug}\">{title}</a>
           </h2>
-          <div>
-            {String.intercalate "\n" $ tp.map $ λ t => s!"<span class=\"lang-badge {t.slug}\">{t.name}</span>"}
-          </div>
+          <div>{String.intercalate "\n" $ tp.map $ λ t => s!"<span class=\"lang-badge {t.slug}\">{t.name}</span>"}</div>
         </div>
-        <p class=\"card-authors\">
-          {String.intercalate ", " $ authors.map renderAuthor}
-        </p>
-        <div class=\"card-tags\">
-          {String.intercalate "\n" $ tags.map $ λ t => s!"<span class=\"tag {t.slug}\">{t.name}</span>"}
-        </div>
+        <p class=\"card-authors\">{String.intercalate ", " $ authors.map renderAuthor}</p>
+        <div class=\"card-tags\">{String.intercalate "\n" $ tags.map $ λ t => s!"<span class=\"tag {t.slug}\">{t.name}</span>"}</div>
       </header>
-      <div class=\"card-body\">
-        {renderDescription description}
-      </div>
+      <div class=\"card-body\">{renderDescription description}</div>
+      <ul class=\"card-related\">{String.intercalate "\n" $ related.map $ λ r => s!"<li><a class=\"related-link\" href=\"#{r.slug}\">{r.label}</a></li>"}</ul>
       <footer class=\"card-footer\">
-        {
-          String.intercalate "\n" $ links.map $ λ l => s!"<a class=\"appendix-link\" href=\"{l.url}\" target=\"_blank\" rel=\"noopener\">{l.label}</a>"
-        }
+        {String.intercalate "\n" $ links.map $ λ l => s!"<a class=\"appendix-link\" href=\"{l.url}\" target=\"_blank\" rel=\"noopener\">{l.label}</a>"}
       </footer>
     </article>
   "
@@ -77,6 +73,7 @@ def renderRepoCard (r : Repository) : String :=
     (tp := r.tp)
     (tags := r.tags)
     (description := r.description)
+    (related := [])
     (links := [{ label := "GitHub", url := r.url.toUrl }])
 
 def renderPublicationCard (p : Publication) : String :=
@@ -87,7 +84,14 @@ def renderPublicationCard (p : Publication) : String :=
     (tp := p.tp)
     (tags := p.tags)
     (description := p.abstract)
-    (links := [])
+    (related := p.repositories.map $ λ r => { label := s!"{r.title}", slug := r.slug })
+    (links :=
+      (
+        match p.doi with
+        | some doi => [{ label := s!"DOI: {doi}", url := s!"https://doi.org/{doi}" }]
+        | none => []
+      )
+    )
 
 def main : IO Unit := do
   let outFile := "output/index.html"
