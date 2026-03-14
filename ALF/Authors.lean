@@ -112,6 +112,14 @@ def «Dongheng Chen» : Author where
   handle := "Dongheng Chen"
   realname := "Dongheng Chen"
 
+def «Andrei Popescu» : Author where
+  handle := "Andrei Popescu"
+  realname := "Andrei Popescu"
+
+def «Dmitriy Traytel» : Author where
+  handle := "Dmitriy Traytel"
+  realname := "Dmitriy Traytel"
+
 end Authors
 
 end

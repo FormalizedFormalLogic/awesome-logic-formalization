@@ -411,6 +411,52 @@ By formalising the GLS calculus and the proofs in Coq, we show that:
   doi := "10.1007/978-3-030-86059-2_18"
   repositories := [«ianshil/CE_GLS»]
 
+def «Popescu Traytel 2019» : Publication where
+  title := "A Formally Verified Abstract Account of Gödel’s Incompleteness Theorems"
+  tp := [.Isabelle]
+  authors := [«Andrei Popescu», «Dmitriy Traytel»]
+  abstract := r#"
+We present an abstract development of Gödel’s incompleteness theorems,
+performed with the help of the Isabelle/HOL theorem prover.
+We analyze sufficient conditions for the theorems’ applicability to a partially specified logic.
+In addition to the usual benefits of generality, our abstract perspective enables a comparison between alternative approaches from the literature.
+These include Rosser’s variation of the first theorem,
+Jeroslow’s variation of the second theorem,
+and the Świerczkowski–Paulson semantics-based approach.
+As part of our framework’s validation, we upgrade Paulson’s Isabelle proof to produce a mechanization of the second theorem
+that does not assume soundness in the standard model,
+and in fact does not rely on any notion of model or semantic interpretation.
+"#
+  tags := [
+    .incompleteness_theorem
+  ]
+  year := 2019
+  doi := "10.1007/978-3-030-29436-6_26"
+  repositories := []
+
+def «Popescu Traytel 2021» : Publication where
+  title := "Distilling the Requirements of Gödel's Incompleteness Theorems with a Proof Assistant"
+  tp := [.Isabelle]
+  authors := [«Andrei Popescu», «Dmitriy Traytel»]
+  abstract := r#"
+We present an abstract development of Gödel’s incompleteness theorems,
+performed with the help of the Isabelle/HOL theorem prover.
+We analyze sufficient conditions for the theorems’ applicability to a partially specified logic.
+In addition to the usual benefits of generality, our abstract perspective enables a comparison between alternative approaches from the literature.
+These include Rosser’s variation of the first theorem,
+Jeroslow’s variation of the second theorem,
+and the Świerczkowski–Paulson semantics-based approach.
+As part of our framework’s validation, we upgrade Paulson’s Isabelle proof to produce a mechanization of the second theorem
+that does not assume soundness in the standard model,
+and in fact does not rely on any notion of model or semantic interpretation.
+"#
+  tags := [
+    .incompleteness_theorem
+  ]
+  year := 2021
+  doi := "10.1007/s10817-021-09599-8"
+  repositories := []
+
 end
 
 end Bibliography
@@ -441,5 +487,7 @@ public def bibliography : List Bibliography := ([
   «Xu Norrish 2020»,
   «YnirPaz/PCF-Theory»,
   «znssong/SetTheory»,
-  ] : List Bibliography)
-  |>.mergeSort (fun a b => String.le a.slug.toLower b.slug.toLower)
+  «Popescu Traytel 2019»,
+  «Popescu Traytel 2021»,
+] : List Bibliography)
+|>.mergeSort (fun a b => String.le a.slug.toLower b.slug.toLower)

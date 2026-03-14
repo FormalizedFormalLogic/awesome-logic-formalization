@@ -114,14 +114,14 @@ a:hover {
 
 .lang-badge.lean4 {
   background: #fff;
-  color: #1f2328;
-  border: 1px solid #d0d7de;
+  color: #000;
+  border: 1px solid #000;
 }
 
 .lang-badge.lean3 {
   background: #fff;
-  color: #1f2328;
-  border: 1px solid #d0d7de;
+  color: #000;
+  border: 1px solid #000;
 }
 
 .lang-badge.coq {
@@ -130,6 +130,8 @@ a:hover {
 
 .lang-badge.isabelle {
   background: #fefe00;
+  color: #000;
+  border: 1px solid #a0a000;
 }
 
 .lang-badge.agda {
