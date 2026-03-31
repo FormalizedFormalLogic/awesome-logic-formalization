@@ -457,6 +457,13 @@ and in fact does not rely on any notion of model or semantic interpretation.
   doi := "10.1007/s10817-021-09599-8"
   repositories := []
 
+def «AlexeyMilovanov/kolmogorov-complexity-lean» : Repository where
+  url := .mk "AlexeyMilovanov" "kolmogorov-complexity-lean"
+  tp := [.Lean4]
+  authors := [«AlexeyMilovanov»]
+  tags := [.incompleteness_theorem]
+  description := "Formalization of the foundations of Algorithmic Information Theory (AIT), centered around Kolmogorov Complexity. Including Uncomputability Theorem and Chaitin's Incompleteness Theorem"
+
 end
 
 end Bibliography
@@ -464,6 +471,7 @@ end Bibliography
 open Bibliography in
 
 public def bibliography : List Bibliography := ([
+  «AlexeyMilovanov/kolmogorov-complexity-lean»,
   «Bailitis 2024»,
   «Bailitis Kirst Forster 2025»,
   «bbentzen/ipl»,

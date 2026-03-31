@@ -120,6 +120,10 @@ def «Dmitriy Traytel» : Author where
   handle := "Dmitriy Traytel"
   realname := "Dmitriy Traytel"
 
+def «AlexeyMilovanov» : Author where
+  handle := "AlexeyMilovanov"
+  github := "AlexeyMilovanov"
+
 end Authors
 
 end
