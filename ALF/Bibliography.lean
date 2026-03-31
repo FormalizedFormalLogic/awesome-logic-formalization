@@ -38,6 +38,7 @@ public inductive Tag where
   | higher_order_logic
   | arithmetic
   | incompleteness_theorem
+  | information_theory
   | set_theory
   | modal_logic
   | provability_logic
@@ -50,6 +51,7 @@ public def Tag.slug : Tag → String
     | .higher_order_logic => "higher-order-logic"
     | .arithmetic => "arithmetic"
     | .incompleteness_theorem => "incompleteness-theorem"
+    | .information_theory => "information-theory"
     | .set_theory => "set-theory"
     | .modal_logic => "modal-logic"
     | .provability_logic => "provability-logic"
@@ -62,6 +64,7 @@ public def Tag.name : Tag → String
     | .higher_order_logic => "Higher-Order Logic"
     | .arithmetic => "Arithmetic"
     | .incompleteness_theorem => "Incompleteness Theorem"
+    | .information_theory => "Information Theory"
     | .set_theory => "Set Theory"
     | .modal_logic => "Modal Logic"
     | .provability_logic => "Provability Logic"
@@ -457,6 +460,13 @@ and in fact does not rely on any notion of model or semantic interpretation.
   doi := "10.1007/s10817-021-09599-8"
   repositories := []
 
+def «AlexeyMilovanov/kolmogorov-complexity-lean» : Repository where
+  url := .mk "AlexeyMilovanov" "kolmogorov-complexity-lean"
+  tp := [.Lean4]
+  authors := [«AlexeyMilovanov»]
+  tags := [.information_theory, .incompleteness_theorem]
+  description := "Formalization of the foundations of Algorithmic Information Theory (AIT), centered around Kolmogorov Complexity. Including Uncomputability Theorem and Chaitin's Incompleteness Theorem"
+
 end
 
 end Bibliography
@@ -464,6 +474,7 @@ end Bibliography
 open Bibliography in
 
 public def bibliography : List Bibliography := ([
+  «AlexeyMilovanov/kolmogorov-complexity-lean»,
   «Bailitis 2024»,
   «Bailitis Kirst Forster 2025»,
   «bbentzen/ipl»,
