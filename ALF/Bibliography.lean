@@ -467,6 +467,13 @@ def «AlexeyMilovanov/kolmogorov-complexity-lean» : Repository where
   tags := [.information_theory, .incompleteness_theorem]
   description := "Formalization of the foundations of Algorithmic Information Theory (AIT), centered around Kolmogorov Complexity. Including Uncomputability Theorem and Chaitin's Incompleteness Theorem"
 
+def «mrmartin/On-Formally-Undecidable-Propositions-of-NP» : Repository where
+  url := .mk "mrmartin" "On-Formally-Undecidable-Propositions-of-NP"
+  tp := [.Lean4]
+  authors := [«mrmartin»]
+  tags := [.arithmetic, .incompleteness_theorem]
+  description := "Machine-checked Lean 4 proof accompanying the paper \"On Formally Undecidable Propositions of Nondeterministic Complexity and Related Classes\". Proves the impossibility of a complete Hilbert triple for arithmetic, Gödel's incompleteness theorems, and the regeneration of independence under theory extension."
+
 end
 
 end Bibliography
@@ -491,6 +498,7 @@ public def bibliography : List Bibliography := ([
   «Maggesi Perini-Brogi 2021»,
   «Maggesi Perini-Brogi 2023»,
   «minchaowu/ModalTab»,
+  «mrmartin/On-Formally-Undecidable-Propositions-of-NP»,
   «ruplet/formalization-of-bounded-arithmetic»,
   «staroperator/mathematical-logic-in-lean»,
   «u5943321/Modal-Logic»,
