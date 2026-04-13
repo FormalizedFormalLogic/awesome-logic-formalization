@@ -124,6 +124,11 @@ def «AlexeyMilovanov» : Author where
   handle := "AlexeyMilovanov"
   github := "AlexeyMilovanov"
 
+def «Malvin Gattinger» : Author where
+  handle := "m4lvin"
+  realname := "Malvin Gattinger"
+  github := "m4lvin"
+
 end Authors
 
 end

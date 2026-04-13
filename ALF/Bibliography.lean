@@ -44,6 +44,7 @@ public inductive Tag where
   | provability_logic
   | tableaux
   | sequent_calculus
+  | interpolation
 
 public def Tag.slug : Tag → String
     | .propositional_logic => "propositional-logic"
@@ -57,6 +58,7 @@ public def Tag.slug : Tag → String
     | .provability_logic => "provability-logic"
     | .tableaux => "tableaux"
     | .sequent_calculus => "sequent-calculus"
+    | .interpolation => "interpolation"
 
 public def Tag.name : Tag → String
     | .propositional_logic => "Propositional Logic"
@@ -70,6 +72,7 @@ public def Tag.name : Tag → String
     | .provability_logic => "Provability Logic"
     | .tableaux => "Tableaux"
     | .sequent_calculus => "Sequent Calculus"
+    | .interpolation => "Interpolation"
 
 
 public structure GitHubRepositoryURL where
@@ -467,6 +470,13 @@ def «AlexeyMilovanov/kolmogorov-complexity-lean» : Repository where
   tags := [.information_theory, .incompleteness_theorem]
   description := "Formalization of the foundations of Algorithmic Information Theory (AIT), centered around Kolmogorov Complexity. Including Uncomputability Theorem and Chaitin's Incompleteness Theorem"
 
+def «m4lvin/tablean» : Repository where
+  url := .mk "m4lvin" "tablean"
+  tp := [.Lean3]
+  authors := [«Malvin Gattinger»]
+  tags := [.modal_logic, .tableaux, .interpolation]
+  description := "Formalisation of a tableau system for modal logic, with soundness, completeness and interpolation."
+
 end
 
 end Bibliography
@@ -500,5 +510,6 @@ public def bibliography : List Bibliography := ([
   «znssong/SetTheory»,
   «Popescu Traytel 2019»,
   «Popescu Traytel 2021»,
+  «m4lvin/tablean»,
 ] : List Bibliography)
 |>.mergeSort (fun a b => String.le a.slug.toLower b.slug.toLower)
