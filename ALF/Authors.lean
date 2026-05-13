@@ -129,6 +129,11 @@ def «Malvin Gattinger» : Author where
   realname := "Malvin Gattinger"
   github := "m4lvin"
 
+def «Madeleine Gignoux» : Author where
+  handle := "mgignoux"
+  realname := "Madeleine Gignoux"
+  github := "mgignoux"
+
 end Authors
 
 end

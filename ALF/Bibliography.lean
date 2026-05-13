@@ -477,6 +477,17 @@ def «m4lvin/tablean» : Repository where
   tags := [.modal_logic, .tableaux, .interpolation]
   description := "Formalisation of a tableau system for modal logic, with soundness, completeness and interpolation."
 
+def «mgignoux/lean4-gl-coalgebras» : Repository where
+  url := .mk "mgignoux" "lean4-gl-coalgebras"
+  tp := [.Lean4]
+  authors := [«Madeleine Gignoux»]
+  tags := [
+    .modal_logic,
+    .provability_logic,
+    .interpolation
+  ]
+  description := "Lean4 mechanization of modal logic GL via coalgebraic proofs, including completeness, interpolation, and fixed-point theorems."
+
 end
 
 end Bibliography
@@ -511,5 +522,6 @@ public def bibliography : List Bibliography := ([
   «Popescu Traytel 2019»,
   «Popescu Traytel 2021»,
   «m4lvin/tablean»,
+  «mgignoux/lean4-gl-coalgebras»,
 ] : List Bibliography)
 |>.mergeSort (fun a b => String.le a.slug.toLower b.slug.toLower)
