@@ -488,6 +488,21 @@ def «mgignoux/lean4-gl-coalgebras» : Repository where
   ]
   description := "Lean4 mechanization of modal logic GL via coalgebraic proofs, including completeness, interpolation, and fixed-point theorems."
 
+def «coquand/agda-godel-tree» : Repository where
+  url := .mk "coquand" "agda-godel-tree"
+  tp := [.Agda]
+  authors := [«coquand»]
+  tags := [.arithmetic, .incompleteness_theorem]
+  description := "Implementation for auto formalisation of Goedel's Second Incompleteness Theorem in Binary Recursive Arithmetic."
+
+def «Coquand 2026» : Publication where
+  title := "Auto formalisation of Goedel's Second Incompleteness Theorem in Binary Recursive Arithmetic"
+  tp := [.Agda]
+  authors := [«coquand»]
+  tags := [.arithmetic, .incompleteness_theorem]
+  year := 2026
+  repositories := [«coquand/agda-godel-tree»]
+
 end
 
 end Bibliography
@@ -501,7 +516,9 @@ public def bibliography : List Bibliography := ([
   «bbentzen/ipl»,
   «bbentzen/mpl»,
   «Bentzen 2021»,
+  «Coquand 2026»,
   «caitlindabrera/Sahlqvist»,
+  «coquand/agda-godel-tree»,
   «D'Abrera Goré 2018»,
   «flypitch/flypitch»,
   «FormalizedFormalLogic/Foundation»,
