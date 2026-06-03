@@ -134,6 +134,11 @@ def «Madeleine Gignoux» : Author where
   realname := "Madeleine Gignoux"
   github := "mgignoux"
 
+def «coquand» : Author where
+  handle := "coquand"
+  realname := "Thierry Coquand"
+  github := "coquand"
+
 end Authors
 
 end
